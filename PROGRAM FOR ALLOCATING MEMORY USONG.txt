@@ -1,0 +1,16 @@
+//PROGRAM FOR ALLOCATING MEMORY USONG CALLOC() AND THEN REALLOCATING THEN ALLOCATING MEMORY USING REALLOC()
+  #include <stdio.h>
+  #include <stdlib.h>
+
+   int main() {
+    int *ptr, *new_ptr, size, new_size;
+
+    printf("Enter the initial size of the array: ");
+    scanf("%d", &size);
+
+    // Allocate memory using calloc
+    ptr = (int *)calloc(size, sizeof(int));
+    if (ptr == NULL) {
+        printf("Memory allocation failed!\n");
+        return 1;
+    }
